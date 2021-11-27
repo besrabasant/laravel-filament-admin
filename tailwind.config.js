@@ -17,6 +17,9 @@ module.exports = {
             fontFamily: {
                 sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
             },
+            height: {
+                '[4rem]': '4rem'
+            }
         },
     },
     plugins: [

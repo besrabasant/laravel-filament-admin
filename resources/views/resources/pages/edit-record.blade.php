@@ -1,4 +1,5 @@
 <x-filament::page :widget-record="$record" class="filament-resources-edit-record-page">
+    <x-filament::form wire:submit.prevent="save" x-form-locale="{{ $this->activeFormLocale }}">
     <x-filament::form wire:submit.prevent="save">
         {{ $this->form }}
 

@@ -198,7 +198,15 @@ class EditRecord extends Page
 
     protected function getRedirectUrl(): ?string
     {
-        return null;
+//        return null;
+
+        $resource = static::getResource();
+
+        if (!$resource::canView($this->record)) {
+            return null;
+        }
+
+        return $resource::getUrl('view', ['record' => $this->record]);
     }
 
     protected function getDeleteRedirectUrl(): ?string

@@ -10,17 +10,17 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                error: colors.red,
                 danger: colors.rose,
                 gray: colors.stone,
-                primary: colors.cyan,
+                primary: colors.teal,
+                secondary: colors.amber,
+                accent: colors.pink,
                 success: colors.green,
                 warning: colors.amber,
             },
             fontFamily: {
                 sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
-            },
-            height: {
-                '[4rem]': '4rem'
             }
         },
     },

@@ -2,19 +2,13 @@
     "name": "laravel-filament-admin",
     "version": "2.0.0",
     "description": "",
-    "main": "tailwind.config.js",
-    "directories": {
-        "doc": "docs"
-    },
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
+        "watch": "mix watch",
         "prod": "npm run production",
         "production": "mix --production"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "devDependencies": {
         "@alpinejs/trap": "^3.5.0",
         "@babel/runtime": "^7.15.3",

@@ -2,10 +2,12 @@
 
 namespace Filament;
 
+use Filament\Components\MediaUpload;
 use Filament\Facades\Filament;
 use Filament\Http\Livewire\Auth\Login;
 use Filament\Http\Livewire\GlobalSearch;
 use Filament\Pages\Dashboard;
+use Filament\Pages\MediaLibrary;
 use Filament\Pages\Page;
 use Filament\Resources\Resource;
 use Filament\Widgets\AccountWidget;
@@ -88,6 +90,8 @@ class FilamentServiceProvider extends PackageServiceProvider
         Livewire::component('filament.core.pages.dashboard', Dashboard::class);
         Livewire::component('filament.core.widgets.account-widget', AccountWidget::class);
         Livewire::component('filament.core.widgets.filament-info-widget', FilamentInfoWidget::class);
+        Livewire::component('filament.core.pages.media-library', MediaLibrary::class);
+        Livewire::component('filament.core.media-library.media-upload', MediaUpload::class);
 
         $this->registerLivewireComponentDirectory(config('filament.livewire.path'), config('filament.livewire.namespace'), 'filament.');
     }

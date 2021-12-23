@@ -7,6 +7,7 @@
     'tag' => 'button',
     'type' => 'button',
     'size' => 'md',
+    'withLoadingIndicator' => true,
 ])
 
 @php
@@ -40,7 +41,7 @@
 
     $hasLoadingIndicator = filled($attributes->get('wire:click')) || (($type === 'submit') && filled($form));
 
-    if ($hasLoadingIndicator) {
+    if ($withLoadingIndicator && $hasLoadingIndicator) {
         $loadingIndicatorTarget = html_entity_decode($attributes->get('wire:click', $form), ENT_QUOTES);
     }
 @endphp
@@ -53,7 +54,7 @@
     >
         @if ($icon && $iconPosition === 'before')
             <x-dynamic-component :component="$icon" :class="$iconClasses"/>
-        @elseif ($hasLoadingIndicator)
+        @elseif ($withLoadingIndicator && $hasLoadingIndicator )
             <svg
                 wire:loading
                 {{ $loadingIndicatorTarget ? "wire:target={$loadingIndicatorTarget}" : '' }}
@@ -79,7 +80,7 @@
     >
         @if ($icon && $iconPosition === 'before')
             <x-dynamic-component :component="$icon" :class="$iconClasses" />
-        @elseif ($hasLoadingIndicator)
+        @elseif ($withLoadingIndicator && $hasLoadingIndicator )
             <svg
                 wire:loading
                 {{ $loadingIndicatorTarget ? "wire:target=\"{$loadingIndicatorTarget}\"" : '' }}

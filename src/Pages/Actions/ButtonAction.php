@@ -11,6 +11,8 @@ class ButtonAction extends Action
 
     protected ?string $iconPosition = null;
 
+    protected bool $withLoadingIndicator = true;
+
     public function iconPosition(string $position): static
     {
         $this->iconPosition = $position;
@@ -21,5 +23,17 @@ class ButtonAction extends Action
     public function getIconPosition(): ?string
     {
         return $this->iconPosition;
+    }
+
+    public function withoutLoadingIndicator(): static
+    {
+        $this->withLoadingIndicator = false;
+
+        return $this;
+    }
+
+    public function getWithLoadingIndicator(): bool
+    {
+        return $this->withLoadingIndicator;
     }
 }

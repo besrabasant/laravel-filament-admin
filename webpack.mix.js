@@ -21,9 +21,7 @@ mix.setPublicPath('dist')
 
 mix.sourceMaps(false);
 
-if (mix.inProduction()) {
-    mix.version()
-}
+mix.version()
 
 mix.js('resources/js/app.js', 'dist')
     .postCss('resources/css/app.css', 'dist', [

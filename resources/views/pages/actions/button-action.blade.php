@@ -21,6 +21,7 @@
     :color="$getColor()"
     :icon="$getIcon()"
     :icon-position="$getIconPosition()"
+    :with-loading-indicator="$getWithLoadingIndicator()"
     class="filament-page-button-action"
 >
     {{ $getLabel() }}

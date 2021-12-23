@@ -37,6 +37,20 @@ Alpine.store('sidebar', {
     },
 })
 
+Alpine.store('mediaLibrary', {
+    uploadProgress: 0,
+    showProgress: false,
+    setUploadProgress(value) {
+        this.uploadProgress = value
+    },
+    showProgressBar() {
+        this.showProgress = true
+    },
+    hideProgressBar() {
+        this.showProgress = false
+    },
+});
+
 Chart.defaults.font.family = `'DM Sans', sans-serif`
 Chart.defaults.backgroundColor = '#737373'
 

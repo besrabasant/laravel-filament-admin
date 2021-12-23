@@ -44,6 +44,7 @@
         "@uppy/core": "^2.1.4",
         "@uppy/drag-drop": "^2.0.5",
         "@uppy/drop-target": "^1.1.1",
-        "@uppy/file-input": "^2.0.5"
+        "@uppy/file-input": "^2.0.5",
+        "@uppy/status-bar": "^2.1.2"
     }
 }
